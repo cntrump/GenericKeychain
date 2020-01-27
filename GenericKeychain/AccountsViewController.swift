@@ -44,7 +44,7 @@ class AccountsViewController: UITableViewController {
         super.prepare(for: segue, sender: sender)
         
         if let navigationController = segue.destination as? UINavigationController,
-                let accountViewController = navigationController.childViewControllers.first as? AccountDetailsViewController,
+            let accountViewController = navigationController.children.first as? AccountDetailsViewController,
                 let indexPath = tableView.indexPathForSelectedRow {
             /*
                 Set the account name on the `AccountDetailsViewController` that
